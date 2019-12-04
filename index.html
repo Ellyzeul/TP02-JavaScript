@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Task Panel</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" href="img/icon.png">
+    </head>
+    <body>
+        <div id="Topo">
+            <div></div>
+            <div><h3>Task Panel</h3></div>
+            <div><button id="addTask">New Task</button></div>
+        </div>
+
+        <div id="wideBar"></div>
+
+        <div id="content">
+            <div id="toDo">
+                <header><p>To do</p></header>
+                <div id="contToDo"></div>
+            </div>
+            <div id="progress">
+                <header><p>In progress</p></header>
+                <div id="contProg"></div>
+            </div>
+            <div id="review">
+                <header><p>Review</p></header>
+                <div id="contReview"></div>
+            </div>
+            <div id="complete">
+                <header><p>Completed</p></header>
+                <div id="contComplet"></div>
+            </div>
+        </div>
+
+        <script src="jquery-3.4.1.min.js"></script>
+        <script src="script.js"></script>
+
+        <div id="newTaskView">
+            <div id="newTask">
+                <header><p>New Task</p></header>
+                <div id="newTaskInput">
+                    <p>Task</p>
+                    <input id="taskName" type="text" placeholder="Task name">
+                    <p>Description</p>
+                    <textarea id="taskDesc" placeholder="Description" cols="33" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

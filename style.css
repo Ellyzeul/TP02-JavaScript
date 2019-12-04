@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px 15px auto;
+    grid-template-areas:
+    "top"
+    "bar"
+    "body"
+}
+
+#Topo{
+    grid-area: top;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}#Topo > div{
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}h3{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}#addTask{
+    height: 80%;
+    width: 20%;
+    border: none;
+    background-color: black;
+    color: white;
+}#addTask:hover{
+    cursor: pointer;
+    transition: 50ms;
+    border: solid;
+    border-color: white;
+}
+
+#wideBar{
+    grid-area: bar;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+}
+
+#content{
+    grid-area: body;
+    width: 100%;
+    height: 582px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}#content > div{
+    width: 500px;
+    height: 450px;
+    border: 1px solid black ;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+    "head"
+    "content";
+    margin: 1%;
+    background-color: white;
+}header{
+    grid-area: head;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}header > p{
+    color: white;
+}#content > div > div{
+    grid-area: content;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#newTaskView{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .5);
+}#newTask{
+    width: 410px;
+    height: 285px;
+    border: 1px solid black ;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+    "head"
+    "input";
+}#newTaskInput{
+    grid-area: input;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}#newTaskInput > input,#newTaskInput > textarea,#newTaskInput > p{
+    margin: 2%;
+}
+
+.Task{
+    margin-top: 9px;
+    width: 94%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25px auto;
+    grid-template-areas:
+    "taskname"
+    "taskcontent";
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 4px 2px 2px rgba(0, 0, 0, .2);
+}.taskName{
+    grid-area: taskname;
+    border-radius: 19px 19px 0px 0px;
+}.taskName > h4{
+    color: white;
+}.taskContent{
+    grid-area: taskcontent;
+    background-color: lightgrey;
+    border-radius: 0px 0px 20px 20px;
+}
