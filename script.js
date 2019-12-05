@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $("#newTaskView").hide();
 
     $("#addTask").click(function(){
